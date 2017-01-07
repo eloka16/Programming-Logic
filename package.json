@@ -2,7 +2,7 @@
   "name": "bootcamp",
   "version": "1.0.0",
   "description": "program-logic",
-  "main": "index.js",
+  "main": "library.js",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
