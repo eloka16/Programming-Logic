@@ -1,3 +1,7 @@
+'use strict';
+
+var aritGeo = require('../library.js').aritGeo;
+
 (function(){
   'use strict';
 

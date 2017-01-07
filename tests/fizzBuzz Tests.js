@@ -1,3 +1,7 @@
+'use strict';
+
+var fizzBuzz = require('../library.js').fizzBuzz;
+
 describe("Fizz Buzz tests ", function() {
 
   it("should return `Fizz` for number divisible by 3", function() {
