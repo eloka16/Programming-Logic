@@ -24,7 +24,7 @@ module.exports = {
         }
     },
 
-    aritGeo: function (arr) {
+    aritGeo: function (Array) {        
         if(Array.length === 0) {
             return 0;
         }else {
@@ -34,7 +34,7 @@ module.exports = {
                 }else if(Array[i+1]/Array[i] === Array[i+2]/Array[i+1]){
                     return "Geometric";
                 }else{
-                return -1;
+                    return -1;
                 }
             }
     
