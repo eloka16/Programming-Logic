@@ -2,7 +2,7 @@
 
 module.exports = {
 
-    findMinMax: function (arr) {
+    findMinMax: function (est) {
 		var b = Math.min.apply(null, est);
 	    var a = Math.max.apply(null, est);
 	    if (a===b){
