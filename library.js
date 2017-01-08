@@ -2,14 +2,19 @@
 
 module.exports = {
 
-    findMinMax: function (est) {
-		var b = Math.min.apply(null, est);
-	    var a = Math.max.apply(null, est);
-	    if (a===b){
-	        return [a];
-	    } else {
-	        return [b,a];
-	    };
+    findMinMax: function (arr) {
+		var min = null;
+	    var max = null;
+        for(var i = 0; i < arr.length; i++) {
+            var elem = arr[i];
+            if(min === null || min > elem) min = elem;
+            if(max === null || max < elem) max = elem;
+        }
+        if(min == max){
+            return[min];
+        }else {
+            return [min,max]
+        }
     },
 
     fizzBuzz: function (n) {
@@ -24,20 +29,30 @@ module.exports = {
         }
     },
 
-    aritGeo: function (Array) {        
-        if(Array.length === 0) {
-            return 0;
-        }else {
-            for(var i = 1; i < Array.length; i++){
-                if(Array[i+1] - Array[i] === Array[i+2] - Array[i+1]){
-                    return "Arithmetic";
-                }else if(Array[i+1]/Array[i] === Array[i+2]/Array[i+1]){
-                    return "Geometric";
-                }else{
-                    return -1;
-                }
-            }
-    
-        }
+    aritGeo: function (arr) {        
+        if(arr.length === 0) {
+  return 0;
+}
+
+var diff = arr[1] - arr[0];
+var ratio = arr[1] / arr[0];
+
+var arith = true;
+var geo = true;
+
+for(var i = 0; i < arr.length - 1; i++)
+{
+    if( arr[i + 1] - arr[i] !== diff )
+      arith = false;
+    if(arr[i + 1] / ratio !== arr[i])
+      geo = false;
+}
+
+if(arith === true)
+    return "Arithmetic";
+else if(geo === true)
+    return "Geometric";
+else
+    return -1;
     }
 }
