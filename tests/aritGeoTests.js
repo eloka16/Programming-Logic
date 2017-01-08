@@ -28,6 +28,9 @@ var aritGeo = require('../library.js').aritGeo;
       it("should return `Arithmetic` for [15, 10, 5, 0, -5, -10]", function() {
         expect(aritGeo([15, 10, 5, 0, -5, -10])).toEqual('Arithmetic');
       });
+      it("should return 'Arithmetic' for [3, 5, 7]", function() {
+        expect(aritGeo([3, 5, 7])).toEqual('Arithmetic');
+      })
 
     });
 
